@@ -35,7 +35,8 @@ function App() {
       :
       "초기화중..."
      }
-     
+     <hr/>
+     <p>copyright alikerock All rights reserved.</p>
     </div>
   );
 }
