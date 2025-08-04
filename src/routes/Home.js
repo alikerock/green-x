@@ -2,7 +2,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { useEffect, useState } from 'react';
 import {db} from '../firebase';
-import { collection, addDoc, serverTimestamp, getDocs, query,  onSnapshot, orderBy, limit} from "firebase/firestore"; 
+import { collection, addDoc, serverTimestamp, query,  onSnapshot, orderBy, limit} from "firebase/firestore"; 
 import ListGroup from 'react-bootstrap/ListGroup';
 import Comment from '../components/Comment';
 import { getStorage, ref, uploadString, getDownloadURL} from "firebase/storage";
@@ -30,7 +30,7 @@ const Home = ({userObj})=>{
   useEffect(()=>{
     getComments();
     console.log(comments);
-  },[]);
+  },[comments]);
 
   const onChange = (e)=>{
     //입력한 내용을 comment에 반영한다.
