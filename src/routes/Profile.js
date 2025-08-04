@@ -54,7 +54,7 @@ const Profile = ()=>{
     }));
     setComments(commentsArray); 
     
-  }, []);
+  }, [user.uid]);
 
 
   // eslint-disable-next-line
